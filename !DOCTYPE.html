@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Selection</title>
+<style>
+/* Center content vertically and horizontally */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Align items in a column */
+  text-align: center;
+}
+
+/* Style buttons */
+button {
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<div>
+  <h1>(●'◡'●) Srećan rođendaaaan (●'◡'●)</h1>
+</div>
+<div id="birthdayMessage">
+  <p>Izaberi opciju:</p>
+</div>
+<div id="options">
+  <div id="optionA">
+    <button onclick="selectOption('A')">NAOČARE</button>
+  </div>
+  <div id="optionB">
+    <button onclick="selectOption('B')">TELEFON</button>
+  </div>
+</div>
+
+<script>
+function selectOption(option) {
+  var birthdayMessage = document.getElementById("birthdayMessage");
+  var options = document.getElementById("options");
+
+  // Hide birthday message and options
+  birthdayMessage.style.display = "none";
+  options.style.display = "none";
+
+  // Display selected option
+  var result = document.createElement("div");
+  document.body.appendChild(result);
+  if (option === 'A') {
+    result.innerHTML = "<h2>Dobar izbor! (✿◕‿◕✿)</h2><img src='https://i.ibb.co/myYqcLF/download.jpg' alt='Glasses'>";
+  } else if (option === 'B') {
+    result.innerHTML = "<h2>Dobar izbor! (✿◕‿◕✿)</h2><img src='https://i.ibb.co/dcxLqzX/telefon.jpg' alt='Phone'>";
+  }
+}
+</script>
+</body>
+</html>
