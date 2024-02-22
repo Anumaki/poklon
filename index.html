@@ -23,7 +23,8 @@ button {
 </style>
 </head>
 <body>
-<audio autoplay loop>
+<button onclick="playAudio()">Play Music</button>
+<audio id="backgroundMusic" loop>
   <source src="cipi.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
@@ -43,6 +44,11 @@ button {
 </div>
 
 <script>
+function playAudio() {
+  var audio = document.getElementById("backgroundMusic");
+  audio.play();
+}
+
 function selectOption(option) {
   var birthdayMessage = document.getElementById("birthdayMessage");
   var options = document.getElementById("options");
